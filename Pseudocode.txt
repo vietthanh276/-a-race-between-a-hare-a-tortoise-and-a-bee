@@ -1,0 +1,48 @@
+This pseudocode outlines the structure of a program simulating a race between a tortoise, hare, and bee.
+
+In main:
+    Initialize variables (current_position_hare, current_position_tortoise, current_position_bee, winner, prevWinner)
+    
+    Prompt user for a random number seed
+    Get seed from the terminal and use it to seed the random number generator
+    Set the current position animals to 0 (at the starting line).
+    
+    int winner = -1  // Initialize an irrelevant winner
+    
+    Start the race:
+    Loop for a specified number of time steps (e.g., 500):
+        Update the positions of the hare, tortoise, and bee using respective update functions (update_hare, update_tortoise, update_bee)
+        Check and update the winner based on the current positions (Use an integer variable to keep track of who is winning (0 = tortoise, 1 = hare, 2 = bee))
+        
+        Set the prevWinner = -1 // Initialize an irrelevant prevWinner
+        if winner is not equal to the previous winner (a new animal is in the lead):
+            Print "At t = time, the animal (square current_position) has taken the lead." to the terminal
+            Update the prevWinner variable
+            
+        Check if any animal has reached the finish line (square 70) (current_position >= 70):
+            Print "After current_time seconds, the [winner's name] wins!!" to the terminal
+            Break out of the loop if a winner is found
+    
+    Return 0
+
+int update_hare(int current_position):
+
+    // Determines the new position of the hare after 1 second
+    // Parameters:
+    // current_position: the current location of the hare
+    // Returns:
+    // The new position of the hare
+
+int update_tortoise(int current_position):
+    // Determines the new position of the tortoise after 1 second
+    // Parameters:
+    // current_position: the current location of the tortoise
+    // Returns:
+    // The new position of the tortoise
+
+int update_bee(int current_position):
+    // Determines the new position of the bee after 1 second
+    // Parameters:
+    // current_position: the current location of the bee
+    // Returns:
+    // The new position of the bee
